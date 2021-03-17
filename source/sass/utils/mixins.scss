@@ -1,0 +1,77 @@
+@mixin font($size: 14px, $height: 26px, $weight: 400) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin ul() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin a() {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin fields() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin wrapper() {
+  width: 270px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+@mixin mobile() {
+  width: $mobile;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin tablet() {
+  width: $tablet;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin desktop() {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin button() {
+  @include font(14px, 16px, 700);
+  padding: 0;
+  border: none;
+  font-family: $font;
+  color: $white;
+  background-color: $accent;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin img() {
+  margin: auto;
+  padding: 20px;
+  box-shadow: -2px -2px 4px rgba($white, .1),
+  2px 2px 6px rgba($black, .8);
+  border-radius: 10px;
+
+  &:hover {
+    transition: all 0.5s ease;
+    box-shadow: -2px -2px 6px rgba($white, .1),
+                2px 2px 6px rgba($black, .8),
+                inset -4px -4px 14px rgba($white, .05),
+                inset 4px 4px 14px rgba($black, .5);
+
+  }
+}

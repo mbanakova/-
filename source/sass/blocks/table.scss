@@ -1,0 +1,19 @@
+.table {
+  @include desktop();
+}
+
+.table__table {
+  border-collapse: collapse;
+  border: none;
+  border-spacing: unset;
+}
+
+.table__cell {
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+
+  & img {
+    @include img();
+  }
+}

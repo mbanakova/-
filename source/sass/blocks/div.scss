@@ -1,0 +1,23 @@
+.div {
+  @include desktop();
+}
+
+.div__table {
+  display: table;
+}
+
+.div__row {
+  display: table-row;
+}
+
+.div__cell {
+  display: table-cell;
+  float: left;
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+
+  & img {
+    @include img();
+  }
+}

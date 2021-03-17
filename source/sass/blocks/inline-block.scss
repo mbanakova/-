@@ -1,0 +1,18 @@
+.inline-block {
+  @include desktop();
+}
+
+.inline-block__list {
+  @include ul();
+}
+
+.inline-block__item {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+
+  & img {
+    @include img();
+  }
+}
